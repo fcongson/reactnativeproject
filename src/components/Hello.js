@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    backgroundColor: "#fff"
   },
   hello: {
     fontSize: 20,
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   button: {
-    backgroundColor: "#eeeeee",
+    backgroundColor: "#eee",
     margin: 10
   },
   clicks: {
