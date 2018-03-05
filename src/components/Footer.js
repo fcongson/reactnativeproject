@@ -5,7 +5,8 @@ export default class Footer extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.footerText}>footer</Text>
+        <Text style={styles.footerText} onPress={() => {}}>hello</Text>
+        <Text style={styles.footerText} onPress={() => {}}>about</Text>
       </View>
     );
   }
@@ -17,7 +18,9 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     backgroundColor: "#fff",
     borderTopWidth: 1,
-    borderTopColor: "#eee"
+    borderTopColor: "#eee",
+    flexDirection: "row",
+    justifyContent: "space-around"
   },
   footerText: {
     textAlign: "center"
