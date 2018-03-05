@@ -19,7 +19,8 @@ const Tabs = TabNavigator(
       style: {
         backgroundColor: "#fff",
         borderTopWidth: 1,
-        borderTopColor: "#eee"
+        borderTopColor: "#eee",
+        paddingBottom: 15
       },
       labelStyle: {
         fontSize: 14
