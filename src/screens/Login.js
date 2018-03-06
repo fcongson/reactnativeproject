@@ -44,7 +44,11 @@ export default class Login extends Component {
               secureTextEntry={true}
             />
             <View style={styles.button}>
-              <Button onPress={() => navigate("Home")} title="login" />
+              <Button
+                onPress={() => navigate("Home")}
+                title="login"
+                color="#fff"
+              />
             </View>
           </View>
           <View style={styles.bottom}>
@@ -104,7 +108,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width / 2
   },
   button: {
-    backgroundColor: "#eee",
+    backgroundColor: "darkgrey",
     margin: 10,
     width: Dimensions.get("window").width / 2
   },

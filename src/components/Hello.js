@@ -18,6 +18,7 @@ export default class Hello extends Component {
               this.setState({ clicks: this.state.clicks + 1 });
             }}
             title="button"
+            color="#fff"
           />
         </View>
         <Text style={styles.clicks}>{this.state.clicks} clicks</Text>
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   button: {
-    backgroundColor: "#eee",
+    backgroundColor: "darkgrey",
     margin: 10
   },
   clicks: {
