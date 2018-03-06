@@ -11,8 +11,8 @@ import Images from "../components/Images";
 const Tabs = TabNavigator(
   {
     hello: { screen: Hello },
-    about: { screen: About },
-    images: { screen: Images }
+    images: { screen: Images },
+    about: { screen: About }
   },
   {
     animationEnabled: true,
