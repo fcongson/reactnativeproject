@@ -96,6 +96,7 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 12,
-    margin: 20
+    textAlign: "center",
+    width: Dimensions.get("window").width / 2
   }
 });
