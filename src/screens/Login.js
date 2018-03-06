@@ -8,6 +8,7 @@ import {
   Dimensions,
   ImageBackground
 } from "react-native";
+import Icon from "react-native-vector-icons/MaterialIcons";
 
 export default class Login extends Component {
   constructor(props) {
@@ -29,7 +30,10 @@ export default class Login extends Component {
       >
         <View style={styles.container}>
           <View style={styles.top}>
-            <Text style={styles.login}>PROJECT</Text>
+            <View style={styles.title}>
+              <Icon name="landscape" size={30} />
+              <Text style={styles.login}>PROJECT</Text>
+            </View>
             <TextInput
               style={styles.email}
               placeholder="email"
@@ -84,10 +88,17 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center"
   },
+  title: {
+    paddingTop: 10,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center"
+  },
   login: {
+    justifyContent: "center",
+    alignItems: "center",
     fontSize: 20,
-    textAlign: "center",
-    margin: 10
+    margin: 2
   },
   email: {
     borderWidth: 1,
