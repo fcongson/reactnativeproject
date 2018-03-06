@@ -21,11 +21,13 @@ const Tabs = TabNavigator(
       style: {
         backgroundColor: "#fff",
         borderTopWidth: 1,
-        borderTopColor: "#eee",
-        paddingBottom: 15
+        borderTopColor: "#eee"
       },
       labelStyle: {
-        fontSize: 14
+        fontSize: 14,
+        flex: 2,
+        justifyContent: "center",
+        alignItems: "center"
       }
     }
   }
