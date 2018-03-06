@@ -21,12 +21,10 @@ export default class Login extends Component {
     const { navigate } = this.props.navigation;
     return (
       <ImageBackground
-        source={{ uri: "https://source.unsplash.com/WKVGmz7o0O4/750x1334" }}
+        source={{ uri: "https://source.unsplash.com/WKVGmz7o0O4/1500x1500" }}
         style={styles.background}
         imageStyle={{
-          resizeMode: "cover",
-          width: Dimensions.get("window").width,
-          height: Dimensions.get("window").height
+          resizeMode: "cover"
         }}
       >
         <View style={styles.container}>
