@@ -32,8 +32,16 @@ export default class Images extends Component {
                 <Image
                   source={{ uri: image.image }}
                   style={{
-                    width: Dimensions.get("window").width - 20,
-                    height: Dimensions.get("window").width - 20
+                    width:
+                      Math.min(
+                        Dimensions.get("window").width,
+                        Dimensions.get("window").height
+                      ) - 20,
+                    height:
+                      Math.min(
+                        Dimensions.get("window").width,
+                        Dimensions.get("window").height
+                      ) - 20
                   }}
                 />
               </View>
@@ -68,8 +76,16 @@ const styles = StyleSheet.create({
     borderColor: "#eee",
     backgroundColor: "#eee",
     margin: 10,
-    height: Dimensions.get("window").width - 20,
-    width: Dimensions.get("window").width - 20,
+    height:
+      Math.min(
+        Dimensions.get("window").width,
+        Dimensions.get("window").height
+      ) - 20,
+    width:
+      Math.min(
+        Dimensions.get("window").width,
+        Dimensions.get("window").height
+      ) - 20,
     justifyContent: "center",
     alignItems: "center"
   }
