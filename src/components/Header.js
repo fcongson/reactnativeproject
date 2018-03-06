@@ -5,7 +5,7 @@ export default class Header extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.headerText}>header</Text>
+        <Text style={styles.headerText}>PROJECT</Text>
       </View>
     );
   }
