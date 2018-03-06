@@ -9,6 +9,9 @@ export default class About extends Component {
         <Text style={styles.description}>
           Click the button. I'll keep count.
         </Text>
+        <Text style={styles.description}>
+          Look at some photos.
+        </Text>
       </View>
     );
   }

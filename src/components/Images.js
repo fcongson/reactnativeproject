@@ -1,19 +1,41 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView, Dimensions } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  Dimensions,
+  Image
+} from "react-native";
 
 export default class Images extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      images: [
+        { id: 0, image: "https://source.unsplash.com/8v9DuOrLu2I/1000x1000" },
+        { id: 1, image: "https://source.unsplash.com/enkRFHbOEE0/1000x1000" },
+        { id: 2, image: "https://source.unsplash.com/W4wZRBZl7SI/1000x1000" },
+        { id: 3, image: "https://source.unsplash.com/ZA727EMMtLA/1000x1000" }
+      ]
+    };
+  }
   render() {
-    const images = ["one", "two", "three", "four"];
-
     return (
       <ScrollView>
         <View style={styles.container}>
           <Text style={styles.about}>images.</Text>
-          <Text style={styles.description}>Currently adding images.</Text>
-          {images.map(image => {
+          <Text style={styles.description}>Images from Unsplash.</Text>
+          {this.state.images.map(image => {
             return (
-              <View key={image} style={styles.imageContainer}>
-                <Text>{image}</Text>
+              <View key={image.id} style={styles.imageContainer}>
+                <Image
+                  source={{ uri: image.image }}
+                  style={{
+                    width: Dimensions.get("window").width - 20,
+                    height: Dimensions.get("window").width - 20
+                  }}
+                />
               </View>
             );
           })}
