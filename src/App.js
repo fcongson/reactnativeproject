@@ -6,11 +6,13 @@ import Hello from "./components/Hello";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Images from "./components/Images";
 
 const Tabs = TabNavigator(
   {
     hello: { screen: Hello },
-    about: { screen: About }
+    about: { screen: About },
+    images: { screen: Images }
   },
   {
     animationEnabled: true,
