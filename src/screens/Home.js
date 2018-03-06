@@ -18,6 +18,7 @@ const Tabs = TabNavigator(
     animationEnabled: true,
     swipeEnabled: true,
     tabBarOptions: {
+      activeTintColor: "#000",
       style: {
         backgroundColor: "#fff",
         borderTopWidth: 1,
