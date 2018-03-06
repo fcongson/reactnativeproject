@@ -1,33 +1,18 @@
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { TabNavigator } from "react-navigation";
+import { StackNavigator } from "react-navigation";
 
-import Hello from "./components/Hello";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import Images from "./components/Images";
+import Login from "./screens/Login";
+import Home from "./screens/Home";
 
-const Tabs = TabNavigator(
+const Screens = StackNavigator(
   {
-    hello: { screen: Hello },
-    about: { screen: About },
-    images: { screen: Images }
+    Login: { screen: Login },
+    Home: { screen: Home }
   },
   {
-    animationEnabled: true,
-    swipeEnabled: true,
-    tabBarOptions: {
-      style: {
-        backgroundColor: "#fff",
-        borderTopWidth: 1,
-        borderTopColor: "#eee",
-        paddingBottom: 15
-      },
-      labelStyle: {
-        fontSize: 14
-      }
-    }
+    headerMode: "none",
+    initialRouteName: "Login"
   }
 );
 
@@ -35,9 +20,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header />
-        <Tabs />
-        {/* <Footer /> */}
+        <Screens />
       </View>
     );
   }
