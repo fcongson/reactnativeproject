@@ -5,7 +5,8 @@ import {
   TextInput,
   Button,
   StyleSheet,
-  Dimensions
+  Dimensions,
+  ImageBackground
 } from "react-native";
 
 export default class Login extends Component {
@@ -19,54 +20,67 @@ export default class Login extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <View style={styles.top}>
-          <Text style={styles.login}>PROJECT</Text>
-          <TextInput
-            style={styles.email}
-            placeholder="email"
-            onChangeText={() => {}}
-            keyboardType="email-address"
-            autoFocus={true}
-          />
-          <TextInput
-            style={styles.password}
-            placeholder="password"
-            onChangeText={() => {}}
-            secureTextEntry={true}
-          />
-          <View style={styles.button}>
-            <Button onPress={() => navigate("Home")} title="login" />
+      <ImageBackground
+        source={{ uri: "https://source.unsplash.com/WKVGmz7o0O4/750x1334" }}
+        style={styles.background}
+        imageStyle={{
+          resizeMode: "cover",
+          width: Dimensions.get("window").width,
+          height: Dimensions.get("window").height
+        }}
+      >
+        <View style={styles.container}>
+          <View style={styles.top}>
+            <Text style={styles.login}>PROJECT</Text>
+            <TextInput
+              style={styles.email}
+              placeholder="email"
+              onChangeText={() => {}}
+              keyboardType="email-address"
+              autoFocus={true}
+            />
+            <TextInput
+              style={styles.password}
+              placeholder="password"
+              onChangeText={() => {}}
+              secureTextEntry={true}
+            />
+            <View style={styles.button}>
+              <Button onPress={() => navigate("Home")} title="login" />
+            </View>
+          </View>
+          <View style={styles.bottom}>
+            <Text style={styles.description}>
+              A project to learn the basics of React Native.
+            </Text>
           </View>
         </View>
-        <View style={styles.bottom}>
-          <Text style={styles.description}>
-            A project to learn the basics of React Native.
-          </Text>
-        </View>
-      </View>
+      </ImageBackground>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center"
+  },
   container: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#fff"
+    alignItems: "center"
   },
   top: {
     flex: 2,
     justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#fff"
+    alignItems: "center"
   },
   bottom: {
     flex: 1,
     justifyContent: "flex-start",
-    alignItems: "center",
-    backgroundColor: "#fff"
+    alignItems: "center"
   },
   login: {
     fontSize: 20,
@@ -76,6 +90,7 @@ const styles = StyleSheet.create({
   email: {
     borderWidth: 1,
     borderColor: "#eee",
+    backgroundColor: "#fff",
     margin: 10,
     padding: 10,
     textAlign: "center",
@@ -84,6 +99,7 @@ const styles = StyleSheet.create({
   password: {
     borderWidth: 1,
     borderColor: "#eee",
+    backgroundColor: "#fff",
     margin: 10,
     padding: 10,
     textAlign: "center",
@@ -96,6 +112,7 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 12,
+    color: "#fff",
     textAlign: "center",
     width: Dimensions.get("window").width / 2
   }
