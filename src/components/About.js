@@ -7,6 +7,9 @@ export default class About extends Component {
       <View style={styles.container}>
         <Text style={styles.about}>about.</Text>
         <Text style={styles.description}>
+          Learn the basics of React Native.
+        </Text>
+        <Text style={styles.description}>
           Click the button. I'll keep count.
         </Text>
         <Text style={styles.description}>
