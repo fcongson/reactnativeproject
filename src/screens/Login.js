@@ -37,14 +37,16 @@ export default class Login extends Component {
             <TextInput
               style={styles.email}
               placeholder="email"
-              onChangeText={() => {}}
+              onChangeText={email => this.setState({ email })}
+              value={this.state.email}
               keyboardType="email-address"
               autoFocus={true}
             />
             <TextInput
               style={styles.password}
               placeholder="password"
-              onChangeText={() => {}}
+              onChangeText={password => this.setState({ password })}
+              value={this.state.password}
               secureTextEntry={true}
             />
             <View style={styles.button}>
