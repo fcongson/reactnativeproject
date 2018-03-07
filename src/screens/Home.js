@@ -7,12 +7,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import About from "../components/About";
 import Images from "../components/Images";
+import Profile from "../components/Profile";
 
 const Tabs = TabNavigator(
   {
     hello: { screen: Hello },
     images: { screen: Images },
-    about: { screen: About }
+    about: { screen: About },
+    profile: { screen: Profile }
   },
   {
     animationEnabled: true,
@@ -36,10 +38,19 @@ const Tabs = TabNavigator(
 
 export default class Home extends Component {
   render() {
+    const { navigate } = this.props.navigation;
+    const { screenProps } = this.props;
+    const logout = () => navigate("Login");
     return (
       <View style={styles.container}>
         <Header />
-        <Tabs />
+        <Tabs
+          screenProps={{
+            email: screenProps.email,
+            password: screenProps.password,
+            logout: logout
+          }}
+        />
         {/* <Footer /> */}
       </View>
     );

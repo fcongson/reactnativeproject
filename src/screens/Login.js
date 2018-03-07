@@ -20,6 +20,7 @@ export default class Login extends Component {
   }
   render() {
     const { navigate } = this.props.navigation;
+    const { screenProps } = this.props;
     return (
       <ImageBackground
         source={{ uri: "https://source.unsplash.com/WKVGmz7o0O4/1500x1500" }}
@@ -51,7 +52,10 @@ export default class Login extends Component {
             />
             <View style={styles.button}>
               <Button
-                onPress={() => navigate("Home")}
+                onPress={() => {
+                  screenProps.setAuth(this.state.email, this.state.password);
+                  navigate("Home");
+                }}
                 title="login"
                 color="#fff"
               />

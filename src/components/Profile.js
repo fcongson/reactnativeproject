@@ -6,14 +6,14 @@ export default class About extends Component {
     const { screenProps } = this.props;
     return (
       <View style={styles.container}>
-        <Text style={styles.about}>about.</Text>
+        <Text style={styles.about}>profile.</Text>
+        <Text style={styles.description}>Hi.</Text>
         <Text style={styles.description}>
-          Learn the basics of React Native.
+          email: {screenProps.email} // password: {screenProps.password}
         </Text>
-        <Text style={styles.description}>
-          Click the button. I'll keep count.
+        <Text style={styles.description} onPress={() => screenProps.logout()}>
+          Bye.
         </Text>
-        <Text style={styles.description}>Look at some photos.</Text>
       </View>
     );
   }

@@ -17,10 +17,26 @@ const Screens = StackNavigator(
 );
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: ""
+    };
+  }
   render() {
+    const setAuth = (email, password) => {
+      this.setState({ email, password });
+    };
     return (
       <View style={styles.container}>
-        <Screens />
+        <Screens
+          screenProps={{
+            email: this.state.email,
+            password: this.state.password,
+            setAuth: setAuth
+          }}
+        />
       </View>
     );
   }
